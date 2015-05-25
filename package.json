@@ -1,0 +1,21 @@
+{
+  "name": "bazarkar",
+  "version": "1.0.0",
+  "description": "a simple twitter bot based on #bazarkar",
+  "main": "app.js",
+  "dependencies": {
+    "node-inspector": "^0.10.1",
+    "twit": "^1.1.20",
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "bazarkar"
+  ],
+  "author": "HMNY",
+  "license": "ISC"
+}
