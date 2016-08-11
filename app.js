@@ -15,13 +15,12 @@ var T = new Twitter( {
 var last_ten_ids = [];
 var base_array =[];
 
-get_last_ten_id();	// making the first set of ids
-
+// making the first set of ids
+get_last_ten_id();	
 
 function main() {
 	retweet();
 }
-
 
 function get_last_ten_id() {
 	base_array = last_ten_ids.slice();
@@ -30,7 +29,6 @@ function get_last_ten_id() {
 			for (var i = 0; i < 10; i++) {			
 				last_ten_ids[i]= tweets.statuses[i].id_str;
 			}
-
 		} else {
 			console.log(error);
 		}
@@ -48,16 +46,14 @@ function retweet() {
 		}
 		if (count == 0) {	// means the tweet is new -> has not been retweeted yet
 			console.log(last_ten_ids[i] + ' is a new tweet id');
-//			get_tweet_by_id(last_ten_ids[i]);	// for debugging
+//			get_tweet_by_id(last_ten_ids[i]);
 			retweet_by_id(last_ten_ids[i]);
 		} else {
-			//
+			// todo:
 		}
 		count = 0;
 	}
-	
 	get_last_ten_id();
-	
 }
 
 function retweet_by_id(id_num) {
@@ -83,6 +79,5 @@ function check_identical_array(arr1, arr2) {
 	}
 	return true;
 }
-
 
 setInterval(main, 20000);
